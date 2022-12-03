@@ -1,7 +1,7 @@
 
-with open('test.txt', 'r') as f:
+with open('day1.txt', 'r') as f:
     lines = f.readlines()
-    print(lines)
+    
     n = []
     p = []
     for x in lines:
@@ -12,12 +12,13 @@ with open('test.txt', 'r') as f:
             p.append(int(x.strip()))
 
 
-print(max(n))
+n.sort()
+print(n[-1])
 
-total = max(n)
-n.remove(max(n))
-total += max(n)
-n.remove(max(n))
-total += max(n)
+# total = max(n)
+# n.remove(max(n))
+# total += max(n)
+# n.remove(max(n))
+# total += max(n)
 
-print(total)
+print(sum(n[-3:]))
