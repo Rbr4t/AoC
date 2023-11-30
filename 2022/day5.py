@@ -36,7 +36,7 @@ class Stack:
     
 
 def solution1():
-    with open('2022/day5.txt', 'r') as file:
+    with open('/home/rbr4t/AoC/2022/day5.txt', 'r') as file:
         file = file.readlines()
         
         stack = Stack()
@@ -64,7 +64,7 @@ def solution1():
     print(ans)
 
 def solution2():
-    with open('2022/day5.txt', 'r') as file:
+    with open('/home/rbr4t/AoC/2022/day5.txt', 'r') as file:
         file = file.readlines()
         
         stack = Stack()
@@ -86,4 +86,4 @@ def solution2():
         ans += str(x[-1][0])
     print(ans)
         
-solution2()
+solution1()
