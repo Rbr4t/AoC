@@ -97,20 +97,26 @@ public class Day1 {
                 extremums[1] = (int) values[m];
             }
         }
-        Object key1 = 0;
-        Object key2 = 0;
+        // System.out.println(Arrays.toString(extremums));
+        ArrayList<String> solution = new ArrayList<String>();
         int value1 = extremums[0];
         int value2 = extremums[1];
 
-        for (Map.Entry entry : positions.entrySet()) {
-            if (value1 == (int) entry.getValue()) {
-                key1 = entry.getKey();
-            } else if (value2 == (int) entry.getValue()) {
-                key2 = entry.getKey();
+        for (int e : extremums) {
+            for (Map.Entry k : positions.entrySet()) {
+                if (e == (int) k.getValue()) {
+                    solution.add(String.valueOf(k.getKey()));
+                }
             }
         }
-        return Integer.parseInt((key1 + "" + key2));
 
+        System.out.println(String.join("", solution));
+        return Integer.parseInt(String.join("", solution));
+
+    }
+
+    public static int part_2_better(String str) {
+        return 1;
     }
 
     public static void main(String[] args) throws Exception {
