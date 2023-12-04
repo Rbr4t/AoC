@@ -63,7 +63,6 @@ public class App {
 
             // part 2 solution
             // first get the matching GAME ID, process how many tickets that would make
-
             int gameId = Integer.parseInt(st.split("\\|")[0].split(": ")[0].trim().replaceAll(" +", " ").split(" ")[1]);
 
             Object[] res = part_2(winNumbers, regNumbers, gameId);
@@ -93,8 +92,6 @@ public class App {
                 }
 
             }
-
-            Collections.sort(tickets);
 
             // remove the previously collected occurrences
             tickets.removeAll(new ArrayList<>(gameId));
