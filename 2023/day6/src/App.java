@@ -33,6 +33,7 @@ public class App {
          * 
          */
 
+        // iterative approach
         for (Long key : board.keySet()) {
 
             for (Long e : board.get(key)) {
@@ -47,6 +48,26 @@ public class App {
 
             }
         }
+
+        // math approach
+        // for (Long key : board.keySet()) {
+
+        // for (Long e : board.get(key)) {
+
+        // int x1 = (int) Math.ceil((-key - Math.sqrt(key * key - 4 * e)) * -0.5);
+        // if (Math.sqrt(key * key - 4 * e) % 2 == 0) {
+        // x1--;
+        // }
+
+        // int x2 = (int) Math.ceil((-key + Math.sqrt(key * key - 4 * e)) * -0.5);
+        // if (Math.sqrt(key * key - 4 * e) % 2 == 0 && Math.sqrt(key * key - 4 * e) % 2
+        // != 0) {
+        // x2++;
+        // }
+        // prod *= x1 - x2;
+
+        // }
+        // }
 
         // for part 2 I removed the spaces manually from the input file and ran the same
         // program
